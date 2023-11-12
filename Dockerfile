@@ -1,13 +1,14 @@
 # base image
-FROM --platform=linux/amd64 tag
+FROM --platform=linux/amd64 ubuntu:22.04
 
 # input GitHub runner version argument
 ARG RUNNER_VERSION
-ENV DEBIAN_FRONTEND=noninteractives
+ENV DEBIAN_FRONTEND=noninteractive
 
 LABEL Author="Archie Jaskowicz"
 LABEL Email="ci@dpp.dev"
 LABEL GitHub="https://github.com/brainboxdotcc"
+LABEL BaseImage="ubuntu:22.04"
 LABEL RunnerVersion=${RUNNER_VERSION}
 
 # update the base packages + add a non-sudo user
@@ -17,7 +18,7 @@ RUN apt-get update -y && apt-get upgrade -y && useradd -m docker
 RUN apt-get install -y --no-install-recommends \
     curl nodejs wget unzip vim git "g++-12" cmake libssl-dev libopus-dev zlib1g-dev libsodium-dev jq build-essential libssl-dev libffi-dev python3 python3-venv python3-dev python3-pip sudo pkg-config
 
-# cd into the user directory, download and unzip the github actions runner
+# cd into the user dairectory, download and unzip the github actions runner
 RUN cd /home/docker && mkdir actions-runner && cd actions-runner \
     && curl -O -L https://github.com/actions/runner/releases/download/v${RUNNER_VERSION}/actions-runner-osx-arm64-${RUNNER_VERSION}.tar.gz \
     && tar xzf ./actions-runner-osx-arm64-${RUNNER_VERSION}.tar.gz
