@@ -8,7 +8,7 @@ Instead, we are now using a Virtual Machine. This Virtual Machine requires 2 cor
 
 This Virtual Machine requires you to do the following steps in-order to set it up:
 
-- Download the VM from https://developer.apple.com/documentation/virtualization/running_macos_in_a_virtual_machine_on_apple_silicon
+- Download the VM from https://developer.apple.com/documentation/virtualization/running_macos_in_a_virtual_machine_on_apple_silicon and follow their guide to get it started.
 - Setup the VM with the name "runner" (the name technically isn't required, but is useful to keep it as runner).
 - Setup a password (this can be completely private and nobody needs to know the password but you).
 - Do not allow location services, skip the apple login, etc.
