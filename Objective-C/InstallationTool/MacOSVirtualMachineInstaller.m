@@ -49,8 +49,8 @@ static void createDiskImage(void)
         abortWithErrorMessage(@"Cannot create disk image.");
     }
 
-    // 32GB disk space.
-    int result = ftruncate(fd, 32ull * 1024ull * 1024ull * 1024ull);
+    // 48GB disk space.
+    int result = ftruncate(fd, 48ull * 1024ull * 1024ull * 1024ull);
     if (result) {
         abortWithErrorMessage(@"ftruncate() failed.");
     }

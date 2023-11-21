@@ -25,8 +25,12 @@ The helper that creates various configuration objects exposed in the `VZVirtualM
 
 + (uint64_t)computeMemorySize
 {
-    // Set the amount of system memory to 2 GB;
+    // Set the amount of system memory to 4 GB;
+#if LOWER_RAM
     uint64_t memorySize = 2ull * 1024ull * 1024ull * 1024ull;
+#else
+    uint64_t memorySize = 4ull * 1024ull * 1024ull * 1024ull;
+#endif
     memorySize = MAX(memorySize, VZVirtualMachineConfiguration.minimumAllowedMemorySize);
     memorySize = MIN(memorySize, VZVirtualMachineConfiguration.maximumAllowedMemorySize);
 

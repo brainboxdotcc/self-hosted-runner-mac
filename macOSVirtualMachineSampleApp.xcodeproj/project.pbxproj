@@ -614,6 +614,11 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"LOWER_RAM=1",
+					"$(inherited)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swift/macOSVirtualMachineSampleApp/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -647,6 +652,7 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_USER_SELECTED_FILES = readwrite;
+				GCC_PREPROCESSOR_DEFINITIONS = "LOWER_RAM=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Swift/macOSVirtualMachineSampleApp/Info.plist;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -713,6 +719,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"LOWER_RAM=1",
+					"$(inherited)",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Objective-C/macOSVirtualMachineSampleApp/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -744,6 +755,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "LOWER_RAM=1";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Objective-C/macOSVirtualMachineSampleApp/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
